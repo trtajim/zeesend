@@ -19,7 +19,6 @@ A real-time messaging Android application.
 </div>
 <br/>
 <div style="display: flex; flex-direction: row; gap: 10px;">
-  <img src="screenshots/Screenshot%20From%202026-08-20%2009-18-34.png" width="200" alt="One-to-One Chat"/>
   <img src="screenshots/Screenshot%20From%202026-08-20%2009-18-57.png" width="200" alt="Chat Interface"/>
   <img src="screenshots/Screenshot%20From%202026-08-20%2009-19-01.png" width="200" alt="Profile"/>
   <img src="screenshots/Screenshot%20From%202026-08-20%2009-25-07.png" width="200" alt="Settings"/>
