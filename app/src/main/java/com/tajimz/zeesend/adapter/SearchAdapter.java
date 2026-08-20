@@ -60,12 +60,12 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
             jsonObject = (JSONObject) jsonArray.get(position);
             String name = jsonObject.getString(CONSTANTS.name);
             String username = jsonObject.getString(CONSTANTS.username);
-            String email = jsonObject.getString(CONSTANTS.email);
-            String bio = jsonObject.getString(CONSTANTS.bio);
-            String image = jsonObject.getString(CONSTANTS.image);
-            String id = jsonObject.getString(CONSTANTS.id);
-            String date = jsonObject.getString(CONSTANTS.createTime);
-            String fcm = jsonObject.getString("fcm");
+            String email = jsonObject.optString(CONSTANTS.email, "");
+            String bio = jsonObject.optString(CONSTANTS.bio, CONSTANTS.defaultBio);
+            String image = jsonObject.optString(CONSTANTS.image, CONSTANTS.defaultImage);
+            String id = jsonObject.optString(CONSTANTS.id, "");
+            String date = jsonObject.optString(CONSTANTS.createTime, "");
+            String fcm = jsonObject.optString("fcm", "");
 
             holder.binding.tvName.setText(name);
             if (directChat){

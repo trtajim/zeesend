@@ -8,7 +8,7 @@ public class CONSTANTS {
     public static String bio = "bio";
     public static String image = "image";
     public static String username = "username";
-    public static String appUrl = "http://192.168.1.7/zeesend/";
+    public static String appUrl = "http://10.0.2.2:8000/";
     public static String defaultImage = "http://tajimz.com/zeesend/pics/default.jpeg";
     public static String defaultBio = "Hello !";
     public static final String SHAREDPREF = "shared_pref_zee";

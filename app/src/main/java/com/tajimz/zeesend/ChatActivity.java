@@ -145,6 +145,10 @@ public class ChatActivity extends BaseActivity {
 
         if (onlyNew) putInJsonObj(jsonObject, "only_new", "1");
         else putInJsonObj(jsonObject, "only_new", "0");
+        
+        // Prevent null lastMessage causing backend query error
+        if (lastMessage == null) lastMessage = "2000-01-01 00:00:00";
+        putInJsonObj(jsonObject, "last_updated", lastMessage);
 
         jsonArray.put(jsonObject);
 

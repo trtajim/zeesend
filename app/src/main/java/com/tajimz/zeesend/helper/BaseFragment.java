@@ -169,11 +169,7 @@ public class BaseFragment extends Fragment {
 
     protected String getStrFromJsonObj(JSONObject jsonObject, String key){
 
-        try {
-            return jsonObject.getString(key);
-        } catch (JSONException e) {
-            throw new RuntimeException(e);
-        }
+        return jsonObject.optString(key, "");
     }
 
     protected void handleMenu(View view){

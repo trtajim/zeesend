@@ -173,7 +173,7 @@ public class BaseActivity extends AppCompatActivity {
         }
         try {
             JSONObject jsonObject = jsonArray.getJSONObject(jsonArray.length() - 1);
-            time = jsonObject.getString("message_time");
+            time = jsonObject.optString("message_time", defaultValue);
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
@@ -193,11 +193,7 @@ public class BaseActivity extends AppCompatActivity {
 
     protected String getStrFromJsonObj(JSONObject jsonObject, String key){
 
-        try {
-            return jsonObject.getString(key);
-        } catch (JSONException e) {
-            throw new RuntimeException(e);
-        }
+        return jsonObject.optString(key, "");
     }
 
     protected String cleanDate(String date) {

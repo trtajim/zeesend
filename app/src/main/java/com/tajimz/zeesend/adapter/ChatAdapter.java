@@ -49,8 +49,8 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolderChat
     public void onBindViewHolder(@NonNull ViewHolderChat holder, int position) {
         try {
             JSONObject jsonObject = (JSONObject) jsonArray.get(position);
-            String message = jsonObject.getString("message");
-            String senderId = jsonObject.getString(CONSTANTS.sender_id);
+            String message = jsonObject.optString("message", "");
+            String senderId = jsonObject.optString(CONSTANTS.sender_id, "");
 
             if (userId.equals(senderId)) {
                 holder.binding.tvMe.setText(message);
