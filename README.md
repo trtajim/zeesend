@@ -2,6 +2,9 @@
 
 A real-time messaging Android application.
 
+⚠️ **Warning:** Built years ago when I was a complete beginner, this project may contain security vulnerabilities and is not recommended for production use.
+A useful learning resource to explore beginner coding practices and learn from mistakes.
+
 ## Features
 
 *   **Authentication:** Sign up, log in, and manage your profile using Firebase Authentication.
